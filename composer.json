@@ -1,0 +1,12 @@
+{
+    "name": "yongfook/bannerbear",
+    "description": "A PHP Wrapper for the Bannerbear API - A image and video generation service",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Yongfook\\Bannerbear\\": "src/"
+        }
+    },
+    "require": {}
+}
