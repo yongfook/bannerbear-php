@@ -1,2 +1,7 @@
 composer.lock
-/vendor/
+composer.phar
+/vendor
+.DS_Store
+Thumbs.db
+/.idea
+/.vscode
