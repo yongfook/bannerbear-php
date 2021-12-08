@@ -1,7 +1,7 @@
 <?php
 require_once('src/bannerbear.php');
 
-$bb = new \Bannerbear('');
+$bb = new Bannerbear\BannerbearClient('');
 
 $account = $bb->account();
 echo $account;

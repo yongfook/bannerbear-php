@@ -31,13 +31,13 @@ require_once('vendor/autoload.php');
 Get the API key for your project in Bannerbear and then instantiate a new client.
 
 ```php
-$bb = new \Bannerbear("your api key");
+$bb = new Bannerbear\BannerbearClient("your api key");
 ```
 
 Alternatively, set the API key in an environment variable named `BANNERBEAR_API_KEY`.
 
 ```php
-$bb = new \Bannerbear();
+$bb = new Bannerbear\BannerbearClient();
 ```
 
 ### Account Info

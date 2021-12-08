@@ -1,6 +1,8 @@
 <?php
 
-class Bannerbear
+namespace Bannerbear;
+
+class BannerbearClient
 {
     private $apiKey;
     protected static $apiBase = 'https://api.bannerbear.com/v2';
