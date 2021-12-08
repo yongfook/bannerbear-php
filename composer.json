@@ -5,8 +5,10 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Yongfook\\Bannerbear\\": "src/"
+            "Bannerbear\\BannerbearClient\\": "src/"
         }
     },
-    "require": {}
+    "require": {
+      "php": ">=7.0.0"
+    }
 }
