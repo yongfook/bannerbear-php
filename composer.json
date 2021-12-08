@@ -5,7 +5,7 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Bannerbear\\BannerbearClient\\": "src/"
+            "Bannerbear\\": "src/"
         }
     },
     "require": {
