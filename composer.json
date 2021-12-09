@@ -5,10 +5,11 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Bannerbear\\BannerbearClient\\": "src/"
+            "Bannerbear\\": "src/"
         }
     },
     "require": {
-      "php": ">=7.0.0"
+      "php": ">=7.1.0",
+      "ext-curl": "*"
     }
 }

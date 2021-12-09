@@ -1,5 +1,5 @@
 <?php
-require_once('src/bannerbear.php');
+require_once('src/BannerbearClient.php');
 
 $bb = new Bannerbear\BannerbearClient('');
 
