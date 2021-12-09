@@ -11,5 +11,8 @@
     "require": {
       "php": ">=7.1.0",
       "ext-curl": "*"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^1.2"
     }
 }
