@@ -322,7 +322,7 @@ class Api
         curl_close($this->client);
 
         if (isset($error_msg)) {
-            throw new \Exception('Status: ' . $status . '. Message: ' . $error_msg);
+            throw new \Exception('Bannerbear Error Status: ' . $status . '. Message: ' . $error_msg);
         }
 
         return $res;
@@ -348,7 +348,7 @@ class Api
         curl_close($this->client);
 
         if (isset($error_msg)) {
-            throw new \Exception('Status: ' . $status . '. Message: ' . $error_msg);
+            throw new \Exception('Bannerbear Error Status: ' . $status . '. Message: ' . $error_msg);
         }
 
         return $res;
@@ -374,7 +374,7 @@ class Api
         curl_close($this->client);
 
         if (isset($error_msg)) {
-            throw new \Exception('Status: ' . $status . '. Message: ' . $error_msg);
+            throw new \Exception('Bannerbear Error Status: ' . $status . '. Message: ' . $error_msg);
         }
 
         return $res;
