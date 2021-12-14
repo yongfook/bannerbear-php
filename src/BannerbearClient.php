@@ -316,13 +316,13 @@ class Api
 
         if (curl_errno($this->client)) {
             $error_msg = curl_error($this->client);
+            $status = curl_getinfo($this->client, CURLINFO_RESPONSE_CODE);
         }
 
         curl_close($this->client);
 
         if (isset($error_msg)) {
-            $status = curl_getinfo($this->client, CURLINFO_RESPONSE_CODE);
-            throw new \Exception('Status: ' . $status . '. Message: ' . $error_msg);
+            throw new \Exception('Bannerbear Error Status: ' . $status . '. Message: ' . $error_msg);
         }
 
         return $res;
@@ -342,13 +342,13 @@ class Api
 
         if (curl_errno($this->client)) {
             $error_msg = curl_error($this->client);
+            $status = curl_getinfo($this->client, CURLINFO_RESPONSE_CODE);
         }
 
         curl_close($this->client);
 
         if (isset($error_msg)) {
-            $status = curl_getinfo($this->client, CURLINFO_RESPONSE_CODE);
-            throw new \Exception('Status: ' . $status . '. Message: ' . $error_msg);
+            throw new \Exception('Bannerbear Error Status: ' . $status . '. Message: ' . $error_msg);
         }
 
         return $res;
@@ -368,13 +368,13 @@ class Api
 
         if (curl_errno($this->client)) {
             $error_msg = curl_error($this->client);
+            $status = curl_getinfo($this->client, CURLINFO_RESPONSE_CODE);
         }
 
         curl_close($this->client);
 
         if (isset($error_msg)) {
-            $status = curl_getinfo($this->client, CURLINFO_RESPONSE_CODE);
-            throw new \Exception('Status: ' . $status . '. Message: ' . $error_msg);
+            throw new \Exception('Bannerbear Error Status: ' . $status . '. Message: ' . $error_msg);
         }
 
         return $res;
