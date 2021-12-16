@@ -8,7 +8,7 @@ Find the full API documentation [here](https://developers.bannerbear.com/)
 
 ## Requirements
 
-PHP 7 or Higher
+PHP 7.4 or Higher
 
 ## Installation
 
@@ -25,6 +25,8 @@ require_once('vendor/autoload.php');
 ```
 
 ## Usage
+
+> Please note that all methods return dictionaries/associative arrays. Responses can be found in the developer documentation [here](https://developers.bannerbear.com/).
 
 ### Authentication
 

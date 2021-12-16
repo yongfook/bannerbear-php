@@ -34,16 +34,16 @@ class BannerbearClient
         return $client;
     }
 
-    public function account(): string
+    public function account()
     {
         return $this->factory()->get('/account');
     }
 
-    public function fonts(): string
+    public function fonts()
     {
         return $this->factory()->get('/fonts');
     }
-    public function effects(): string
+    public function effects()
     {
         return $this->factory()->get('/effects');
     }
@@ -52,12 +52,12 @@ class BannerbearClient
     //            IMAGES
     // =================================
 
-    public function get_image(string $uid): string
+    public function get_image(string $uid)
     {
         return $this->factory()->get('/images/' . $uid);
     }
 
-    public function list_images(int $page = null, int $limit = null): string
+    public function list_images(int $page = null, int $limit = null)
     {
         $queryString = [];
         if ($page) array_push($queryString, 'page=' . $page);
@@ -68,7 +68,7 @@ class BannerbearClient
     /**
      * @param array<string,mixed> $params
      */
-    public function create_image(string $uid, array $params, bool $synchronous = false): string
+    public function create_image(string $uid, array $params, bool $synchronous = false)
     {
         $params['template'] = $uid;
         if ($synchronous) {
@@ -80,12 +80,12 @@ class BannerbearClient
     // =================================
     //            VIDEOS
     // =================================
-    public function get_video(string $uid): string
+    public function get_video(string $uid)
     {
         return $this->factory()->get('/videos/' . $uid);
     }
 
-    public function list_videos(int $page = null): string
+    public function list_videos(int $page = null)
     {
         $queryString = array();
         if ($page) array_push($queryString, 'page=' . $page);
@@ -95,7 +95,7 @@ class BannerbearClient
     /**
      * @param array<string,mixed> $params
      */
-    public function create_video(string $uid, array $params): string
+    public function create_video(string $uid, array $params)
     {
         $params['video_template'] = $uid;
         return $this->factory()->post('/videos', $params);
@@ -104,7 +104,7 @@ class BannerbearClient
     /**
      * @param array<string,mixed> $params
      */
-    public function update_video(string $uid, array $params): string
+    public function update_video(string $uid, array $params)
     {
         $params['uid'] = $uid;
         return $this->factory()->patch('/videos', $params);
@@ -113,12 +113,12 @@ class BannerbearClient
     // =================================
     //            COLLECTIONS
     // =================================
-    public function get_collection(string $uid): string
+    public function get_collection(string $uid)
     {
         return $this->factory()->get('/collections/' . $uid);
     }
 
-    public function list_collections(int $page = null): string
+    public function list_collections(int $page = null)
     {
         $queryString = [];
         if ($page) array_push($queryString, 'page=' . $page);
@@ -128,7 +128,7 @@ class BannerbearClient
     /**
      * @param array<string,mixed> $params
      */
-    public function create_collection(string $uid, array $params, bool $synchronous = false): string
+    public function create_collection(string $uid, array $params, bool $synchronous = false)
     {
         $params['template_set'] = $uid;
         if ($synchronous) {
@@ -140,12 +140,12 @@ class BannerbearClient
     // =================================
     //            SCREENSHOTS
     // =================================
-    public function get_screenshot(string $uid): string
+    public function get_screenshot(string $uid)
     {
         return $this->factory()->get('/screenshots/' . $uid);
     }
 
-    public function list_screenshots(int $page = null): string
+    public function list_screenshots(int $page = null)
     {
         $queryString = [];
         if ($page) array_push($queryString, 'page=' . $page);
@@ -155,7 +155,7 @@ class BannerbearClient
     /**
      * @param array<string,mixed> $params
      */
-    public function create_screenshot(string $url, array $params, bool $synchronous = false): string
+    public function create_screenshot(string $url, array $params, bool $synchronous = false)
     {
         $params['url'] = $url;
         if ($synchronous) {
@@ -167,12 +167,12 @@ class BannerbearClient
     // =================================
     //            ANIMATED GIFS
     // =================================
-    public function get_animated_gif(string $uid): string
+    public function get_animated_gif(string $uid)
     {
         return $this->factory()->get('/animated_gifs/' . $uid);
     }
 
-    public function list_animated_gifs(int $page = null): string
+    public function list_animated_gifs(int $page = null)
     {
         $queryString = array();
         if ($page) array_push($queryString, 'page=' . $page);
@@ -182,7 +182,7 @@ class BannerbearClient
     /**
      * @param array<string,mixed> $params
      */
-    public function create_animated_gif(string $uid, array $params): string
+    public function create_animated_gif(string $uid, array $params)
     {
         $params['template'] = $uid;
         return $this->factory()->post('/animated_gifs', $params);
@@ -191,12 +191,12 @@ class BannerbearClient
     // =================================
     //            MOVIES
     // =================================
-    public function get_movie(string $uid): string
+    public function get_movie(string $uid)
     {
         return $this->factory()->get('/movies/' . $uid);
     }
 
-    public function list_movies(int $page = null): string
+    public function list_movies(int $page = null)
     {
         $queryString = array();
         if ($page) array_push($queryString, 'page=' . $page);
@@ -206,7 +206,7 @@ class BannerbearClient
     /**
      * @param array<string,mixed> $params
      */
-    public function create_movie(array $params): string
+    public function create_movie(array $params)
     {
         return $this->factory()->post('/movies', $params);
     }
@@ -214,12 +214,12 @@ class BannerbearClient
     // =================================
     //            TEMPLATES
     // =================================
-    public function get_template(string $uid): string
+    public function get_template(string $uid)
     {
         return $this->factory()->get('/templates/' . $uid);
     }
 
-    public function list_templates(int $page = null, int $limit = null, string $tag = null, string $name = null): string
+    public function list_templates(int $page = null, int $limit = null, string $tag = null, string $name = null)
     {
         $queryString = array();
         if ($page) array_push($queryString, 'page=' . $page);
@@ -232,7 +232,7 @@ class BannerbearClient
     /**
      * @param array<string,mixed> $params
      */
-    public function update_template(string $uid, array $params): string
+    public function update_template(string $uid, array $params)
     {
         return $this->factory()->patch('/templates/' . $uid, $params);
     }
@@ -240,12 +240,12 @@ class BannerbearClient
     // =================================
     //            VIDEO TEMPLATES
     // =================================
-    public function get_video_template(string $uid): string
+    public function get_video_template(string $uid)
     {
         return $this->factory()->get('/video_templates/' . $uid);
     }
 
-    public function list_video_templates(int $page = null): string
+    public function list_video_templates(int $page = null)
     {
         $queryString = array();
         if ($page) array_push($queryString, 'page=' . $page);
@@ -255,12 +255,12 @@ class BannerbearClient
     // =================================
     //            TEMPLATE SETS
     // =================================
-    public function get_template_set(string $uid): string
+    public function get_template_set(string $uid)
     {
         return $this->factory()->get('/template_sets/' . $uid);
     }
 
-    public function list_template_sets(int $page = null): string
+    public function list_template_sets(int $page = null)
     {
         $queryString = array();
         if ($page) array_push($queryString, 'page=' . $page);
@@ -312,12 +312,12 @@ class Api
         return $this;
     }
 
-    private function getUrl(string $url): string
+    private function getUrl(string $url)
     {
         return $this->url . $url;
     }
 
-    public function get(string $url): string
+    public function get(string $url)
     {
         curl_setopt($this->client, CURLOPT_URL, $this->getUrl($url));
 
@@ -335,13 +335,13 @@ class Api
             throw new \Exception('Bannerbear Error Status: ' . $status . '. Message: ' . $error_msg);
         }
 
-        return $res;
+        return json_decode($res, true);
     }
 
     /**
      * @param array<string,mixed> $params
      */
-    public function patch(string $url, array $params): string
+    public function patch(string $url, array $params)
     {
         curl_setopt($this->client, CURLOPT_URL, $this->getUrl($url));
         curl_setopt($this->client, CURLOPT_CUSTOMREQUEST, 'PATCH');
@@ -361,13 +361,13 @@ class Api
             throw new \Exception('Bannerbear Error Status: ' . $status . '. Message: ' . $error_msg);
         }
 
-        return $res;
+        return json_decode($res, true);
     }
 
     /**
      * @param array<string,mixed> $params
      */
-    public function post(string $url, array $params): string
+    public function post(string $url, array $params)
     {
         curl_setopt($this->client, CURLOPT_URL, $this->getUrl($url));
         curl_setopt($this->client, CURLOPT_POST, true);
@@ -387,6 +387,6 @@ class Api
             throw new \Exception('Bannerbear Error Status: ' . $status . '. Message: ' . $error_msg);
         }
 
-        return $res;
+        return json_decode($res, true);
     }
 }
