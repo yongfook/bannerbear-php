@@ -26,6 +26,21 @@ require_once('vendor/autoload.php');
 
 ## Usage
 
+### Table of Contents
+
+- [Authentication](#authentication)
+- [Account Info](#account-info)
+- [Images](#images)
+- [Videos](#videos)
+- [Collections](#collections)
+- [Animated Gifs](#animated-gifs)
+- [Movies](#movies)
+- [Screenshots](#screenshots)
+- [Templates](#templates)
+- [Template Sets](#template-sets)
+- [Video Templates](#video-templates)
+- [Signed URLs](#signed-urls)
+
 > Please note that all methods return dictionaries/associative arrays. Responses can be found in the developer documentation [here](https://developers.bannerbear.com/).
 
 ### Authentication
