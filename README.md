@@ -8,7 +8,7 @@ Find the full API documentation [here](https://developers.bannerbear.com/)
 
 ## Requirements
 
-PHP 7.4 or Higher
+PHP 7.1 or Higher
 
 ## Installation
 
