@@ -1,5 +1,7 @@
 # Bannerbear PHP Library
 
+[![Integrate](https://github.com/yongfook/bannerbear-php/workflows/Integrate/badge.svg)](https://github.com/yongfook/bannerbear-php/actions)
+
 A PHP wrapper for the Bannerbear API - an image and video generation service.
 
 ## Documentation
