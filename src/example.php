@@ -1,5 +1,5 @@
 <?php
-require_once('src/BannerbearClient.php');
+require_once(__DIR__ . '/../vendor/autoload.php');
 
 $bb = new Bannerbear\BannerbearClient('');
 
